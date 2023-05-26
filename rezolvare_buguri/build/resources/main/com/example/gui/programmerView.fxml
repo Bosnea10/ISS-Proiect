@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gui.ProgrammerController">
+   <center>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="400.0" prefWidth="394.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="91.0" prefWidth="293.0">
+                     <children>
+                        <Label text="All bugs">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="230.0" prefWidth="293.0">
+                     <children>
+                        <TableView fx:id="bugsTableView" prefHeight="223.0" prefWidth="323.0">
+                          <columns>
+                            <TableColumn fx:id="nameColumn" prefWidth="131.19998472929" text="Name" />
+                            <TableColumn fx:id="descriptionColumn" prefWidth="132.79991149902344" text="Description" />
+                              <TableColumn fx:id="projectColumn" prefWidth="129.60003662109375" text="Project" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#loadBugsTable" prefHeight="34.0" prefWidth="110.0" text="See all bugs">
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="110.0" text="Assign bug" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="400.0" prefWidth="408.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="90.0" prefWidth="308.0">
+                     <children>
+                        <Label text="All assigned bugs">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="224.0" prefWidth="347.0">
+                     <children>
+                        <TableView prefHeight="224.0" prefWidth="170.0">
+                          <columns>
+                            <TableColumn prefWidth="100.00000154972076" text="Name" />
+                            <TableColumn prefWidth="113.59996795654297" text="Description" />
+                              <TableColumn prefWidth="97.60003662109375" text="Column X" />
+                              <TableColumn prefWidth="95.99995727539061" text="Column X" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="94.0" prefWidth="210.0">
+                           <children>
+                              <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="130.0" text="See all assigned bugs" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="94.0" prefWidth="214.0">
+                           <children>
+                              <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="100.0" text="Eliminate bug">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Unresolved bug" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+</BorderPane>
